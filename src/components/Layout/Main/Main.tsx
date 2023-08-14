@@ -10,7 +10,7 @@ const titles: Record<string, string> = {
 
 export default function Main() {
     const location = useLocation();
-    const key = location.pathname.slice(1);
+    const key = location.pathname.split('/').slice(-1)[0];
     const title = titles[key];
     const order = Object.keys(data).indexOf(key) + 1;
 

@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig((env) =>({
     plugins: [react()],
-    base: './',
+    base: env.mode === 'production' ? '/space-tourism/' : './',
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
         },
     },
-});
+}));

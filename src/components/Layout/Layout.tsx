@@ -11,7 +11,7 @@ const keyMap: Record<string, string> = {
 export default function Layout() {
     const location = useLocation();
     const hasMainLayout = Object.keys(data).includes(
-        location.pathname.slice(1)
+        location.pathname.split('/').slice(-1)[0]
     );
     const isMobile = useMediaQuery('(max-width: 768px)');
     const isTablet = useMediaQuery('(max-width: 1024px)');

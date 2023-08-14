@@ -10,7 +10,7 @@ interface ListItemProps {
 export default function ListItem({ label, index }: ListItemProps) {
     const location = useLocation();
     const isActive = useMemo(
-        () => location.pathname === `/${label.toLowerCase()}`,
+        () => location.pathname.split('/').slice(-1)[0] === label.toLowerCase(),
         [location.pathname, label]
     );
     const isMobile = useMediaQuery('(max-width: 768px)');
