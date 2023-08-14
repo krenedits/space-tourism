@@ -1,0 +1,163 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    margin-top: 135px;
+    display: flex;
+    gap: 80px;
+}
+
+.image {
+    position: fixed;
+    right: 0;
+    max-width: 30%;
+    z-index: -1;
+}
+
+.stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.step,
+.activeStep {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ffffff40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 32px;
+    font-family: Bellefair, serif;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    user-select: none;
+}
+
+.activeStep {
+    background-color: #fff;
+    color: #0b0d17;
+}
+
+.step:hover {
+    border: 1px solid #ffffff;
+}
+
+.step {
+    color: #fff;
+}
+
+.text div {
+    letter-spacing: 2.7px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.text h3 {
+    margin-bottom: 16px;
+}
+
+.text p {
+    max-width: 444px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .image {
+        position: relative;
+        width: 100svw;
+        margin-top: 32px;
+        max-width: none;
+    }
+
+    .content {
+        margin-top: 32px;
+        flex-direction: column;
+        align-items: center;
+        gap: 44px;
+        padding-bottom: 100px;
+    }
+
+    .stepper {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .step,
+    .activeStep {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .text {
+        text-align: center;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text div,
+    .text h3,
+    .text p {
+        margin-bottom: 0;
+    }
+
+    .text p {
+        max-width: 440px;
+        line-height: 28px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        margin-top: 0;
+    }
+
+    .content {
+        margin-top: 24px;
+        gap: 26px;
+        padding-bottom: 50px;
+    }
+
+    .step,
+    .activeStep {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .text {
+        text-align: center;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text div,
+    .text h3,
+    .text p {
+        margin-bottom: 0;
+    }
+
+    .text p {
+        max-width: 330px;
+        line-height: 28px;
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    .text div {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,33 @@
+.container {
+    padding: 165px 165px 0 165px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    height: 100svh;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 40px;
+        padding-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        position: inherit;
+        margin-top: 120px;
+        height: calc(100svh - 120px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 112px;
+        gap: 80px;
+        padding: 0 20px;
+    }
+
+    .container h5 {
+        justify-content: center;
+    }
+}
