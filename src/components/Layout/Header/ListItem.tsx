@@ -18,7 +18,7 @@ export default function ListItem({ label, index }: ListItemProps) {
     return (
         <li>
             <Link
-                to={`/${label.toLowerCase()}`}
+                to={`./${label.toLowerCase()}`}
                 style={
                     isActive && !isMobile
                         ? {

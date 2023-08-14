@@ -14,7 +14,7 @@ const Pages = {
         Technology,
         {
             path: '*',
-            element: <Navigate to='/home' />,
+            element: <Navigate to='./home' />,
         },
     ],
 };
