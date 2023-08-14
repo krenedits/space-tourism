@@ -1,6 +1,6 @@
 import data from '@/data.json';
 import styles from './Crew.module.css';
-import { PaginatorProps } from './Crew';
+import { PaginatorProps } from './types';
 import { Page } from './Page';
 
 export function Paginator({ index, setIndex }: PaginatorProps) {
